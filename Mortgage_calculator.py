@@ -41,13 +41,15 @@ print('\t'+ mes)
 print('\t'+ ('=' * len(mes)))
 
 mortgage = Mortgage()
-print("Choose '1' for monthly amount or '2' for loan's term(years).")
-choice = pyip.inputMenu(choices=['monthly amount', "loan's term"], prompt='Your choice: \n', numbered=True)
-print(choice)
+print("Choose '1' for monthly amount, '2' for loan's term(years), or '3' to exit.")
+choice = pyip.inputMenu(choices=['monthly amount', "loan's term", "quit"], numbered=True)
+print('Your choice:', choice)
 if choice == 'monthly amount':
     print(mortgage.monthly_amount())
 elif choice == "loan's term":
     print(mortgage.term())
+elif choice == "quit":
+    quit()
 else:
     print('Option is not available.')
 
