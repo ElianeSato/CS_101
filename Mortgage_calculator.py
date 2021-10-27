@@ -36,22 +36,28 @@ class Mortgage:
 clean_screen = os.system('clear')
 
 mes = 'Welcome to the Mortgage Calculator!'
-print('\t'+ ('=' * len(mes)))
-print('\t'+ mes)
-print('\t'+ ('=' * len(mes)))
+print('=' * (len(mes) + 10))
+print(mes.center(len(mes) + 10))
+print('=' * (len(mes) + 10))
 
 mortgage = Mortgage()
 print("Choose '1' for monthly amount, '2' for loan's term(years), or '3' to exit.")
 choice = pyip.inputMenu(choices=['monthly amount', "loan's term", "quit"], numbered=True)
 print('Your choice:', choice)
 if choice == 'monthly amount':
+    print('=' * (len(mes) + 10))
     print(mortgage.monthly_amount())
+    print('=' * (len(mes) + 10))
 elif choice == "loan's term":
+    print('=' * (len(mes) + 10))
     print(mortgage.term())
-elif choice == "quit":
-    quit()
+    print('=' * (len(mes) + 10))
 else:
-    print('Option is not available.')
+    print('=' * (len(mes) + 10))
+    print('Thanks for your visit!'.center(len(mes) + 10))
+    print('=' * (len(mes) + 10))
+    quit()
+
 
 
 
