@@ -1,5 +1,8 @@
 #! python3
 # Final project in "CS 101: Introduction to Programming" class: Mortgage calculator
+# Usage: class Mortgage - sets loan's principal and yearly interest rate
+#        monthly_amount method - if chosen, this method calculates the monthly payment to zero balance
+#        term method - if chosen, this method calculates how long to zero balance
 
 import os
 import pyinputplus as pyip
